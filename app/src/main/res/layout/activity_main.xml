@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    >
+
+    <include layout="@layout/content_main" />
+
+    <ImageButton
+        android:id="@+id/wifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:src="@drawable/ic_baseline_wifi_off_24"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        />
+
+    <ImageButton
+        android:id="@+id/capture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_camera"
+        android:layout_gravity="bottom|center"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_marginBottom="10dp"
+        />
+
+    <ImageButton
+        android:id="@+id/gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_gallery"
+        android:layout_gravity="bottom|end"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="15dp"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
