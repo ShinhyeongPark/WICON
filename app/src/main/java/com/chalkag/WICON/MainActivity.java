@@ -1,19 +1,4 @@
-/*
- * Copyright 2016 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
+//App Main Module
 package com.chalkag.WICON;
 
 import android.Manifest;
@@ -79,7 +64,7 @@ import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
-    private static final String CLOUD_VISION_API_KEY = "AIzaSyABEC-R66hUG8jDHdJAbrvdr-ED-WaY2nc"; //API Key
+    private static final String CLOUD_VISION_API_KEY = "[API KEY]"; 
     public static final String FILE_NAME = "temp.jpg";
     private static final String ANDROID_CERT_HEADER = "X-Android-Cert";
     private static final String ANDROID_PACKAGE_HEADER = "X-Android-Package";
@@ -102,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
     private static Context dd;
 
     private String imageFilePath;
-    private String filePath = "/storage/emulated/0/Android/data/com.chalkag.WICON/files/Pictures/";
+    private String filePath = "/storage/emulated/0/Android/data/com.chalkag.WICON/files/Pictures/"; //App 내 앨범 경로
     private WifiManager wifiManager;
     private ListView wifiList;
     WifiReceiver receiverWifi;
@@ -113,9 +98,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageButton gallery=(ImageButton)findViewById(R.id.gallery);
-        ImageButton capture=(ImageButton)findViewById(R.id.capture);
-        ImageButton wifi=(ImageButton)findViewById(R.id.wifi);
+        ImageButton gallery=(ImageButton)findViewById(R.id.gallery); //앨범 버튼
+        ImageButton capture=(ImageButton)findViewById(R.id.capture); //이미지 스캔 버튼
+        ImageButton wifi=(ImageButton)findViewById(R.id.wifi); //WiFi 연결 버튼
 
         //갤러리 여는 버튼
         gallery.setOnClickListener(new View.OnClickListener() {
@@ -141,13 +126,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 if(ssid != null && messagestate){
-                    if(connect_ap(ssid)) {
+                    if(connect_ap(ssid)) { //WiFi 자동연결 Success
                         wifi.setImageResource(R.drawable.ic_baseline_wifi_24);
-                        Toast toast = Toast.makeText(getApplicationContext(), "와이파이 연결성공", Toast.LENGTH_SHORT);
+                        Toast toast = Toast.makeText(getApplicationContext(), "와이파이 연결성공", Toast.LENGTH_SHORT); //App 화면에 출력
                         toast.setGravity(Gravity.BOTTOM, 0,350);
                         toast.show();
                     }
-                    else{
+                    else{ //WiFi Connection Failed
                         wifiManager.disconnect();
                         wifi.setImageResource(R.drawable.ic_baseline_wifi_off_24);
                         Toast toast = Toast.makeText(getApplicationContext(), "해당 와이파이에 연결을 실패하였습니다.", Toast.LENGTH_SHORT);
@@ -155,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
                         toast.show();
                     }
                 }
-                else {
+                else { //사진 속에 Text가 없을 경우
                     wifiManager.disconnect();
                     wifi.setImageResource(R.drawable.ic_baseline_wifi_off_24);
                     Toast toast = Toast.makeText(getApplicationContext(), "올바른 사진을 선택하시오", Toast.LENGTH_SHORT);
@@ -165,6 +150,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Loading WiFi Connection
         wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         if (!wifiManager.isWifiEnabled()) {
             Toast.makeText(getApplicationContext(), "Turning WiFi ON...", Toast.LENGTH_LONG).show();
@@ -185,7 +171,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-    //----------------------1-
     protected void onPostResume() {
         super.onPostResume();
         // receiverWifi = new WifiReceiver(wifiManager, wifiList);
