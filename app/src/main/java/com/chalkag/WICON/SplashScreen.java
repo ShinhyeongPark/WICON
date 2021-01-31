@@ -1,3 +1,7 @@
+/*
+App Main Screen
+*/
+
 package com.chalkag.WICON;
 
 import android.content.Intent;
@@ -10,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class SplashScreen extends AppCompatActivity {
     ImageView iv;
     ProgressBar pb;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +43,7 @@ public class SplashScreen extends AppCompatActivity {
             }
         }
     }
-    private void startApp(){
+    private void startApp(){ //App이 실행될 때 보여주는 화면: Loading Scrren
         Intent i = new Intent(SplashScreen.this, MainActivity.class);
         startActivity(i);
     }
