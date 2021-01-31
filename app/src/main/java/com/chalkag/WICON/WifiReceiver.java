@@ -1,3 +1,7 @@
+/*
+현재 연결 가능한 WiFi List를 추출하는 Function
+*/
+
 package com.chalkag.WICON;
 
 import android.content.BroadcastReceiver;
@@ -27,15 +31,6 @@ class WifiReceiver extends BroadcastReceiver {
             ArrayList<String> deviceList = new ArrayList<>();
             System.out.print("WIFI LIST:");
             System.out.println(wifiList);
-//            System.out.print("DEVICE LIST:");
-//            System.out.println(deviceList);
-//            for (ScanResult scanResult : wifiList) {
-//                sb.append("\n").append(scanResult.SSID).append(" - ").append(scanResult.capabilities);
-//                deviceList.add(scanResult.SSID + " - " + scanResult.capabilities);
-//            }
-//            Toast.makeText(context, sb, Toast.LENGTH_SHORT).show();
-//            ArrayAdapter arrayAdapter = new ArrayAdapter(context, android.R.layout.simple_list_item_1, deviceList.toArray());
-//            wifiDeviceList.setAdapter(arrayAdapter);
         }
     }
 }
