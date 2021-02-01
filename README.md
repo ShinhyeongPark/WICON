@@ -1,4 +1,4 @@
-# Wi-Fi Connector: WICON
+# Wi-Fi Connector: WICON(Android)
 ## Description
 > WiFi 안내문을 스캔하여 얻은 안내문 속 텍스트의 ID,Password를 자동으로 입력하여 <br>
 > 사용자가 WiFi 정보를 입력할 필요없이 자동으로 WiFi 연결해주는 App
