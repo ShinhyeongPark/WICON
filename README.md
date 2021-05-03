@@ -8,6 +8,15 @@
 2. WiFi 안내문 스캔
 3. 앨범에 있는 사진(안내문) 스캔
 
+## Tech Stack
+![tech](https://user-images.githubusercontent.com/57867611/116843181-18cac080-ac1a-11eb-8b47-07fcd6b1ec0e.png)
+
+## 시스템 흐름도
+<img width="614" alt="flow" src="https://user-images.githubusercontent.com/57867611/116843176-14060c80-ac1a-11eb-9c9d-3cf57325f816.png">
+
+## 실행화면
+<img width="620" alt="screen" src="https://user-images.githubusercontent.com/57867611/116843179-16686680-ac1a-11eb-98a3-c63241d4fa67.png">
+
 ## Algorithm
 1. Google Cloud Vision API를 사용해 WiFi 안내문 속 Text 추출
 2. 현재 연결가능한 WiFi 리스트 Load
