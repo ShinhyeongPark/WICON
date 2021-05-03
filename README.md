@@ -9,7 +9,7 @@
 3. 앨범에 있는 사진(안내문) 스캔
 
 ## Tech Stack
-![tech](https://user-images.githubusercontent.com/57867611/116843181-18cac080-ac1a-11eb-8b47-07fcd6b1ec0e.png)
+![tech](https://user-images.githubusercontent.com/57867611/116843395-cccc4b80-ac1a-11eb-82fc-7341fc3686f1.png)
 
 ## 시스템 흐름도
 <img width="614" alt="flow" src="https://user-images.githubusercontent.com/57867611/116843176-14060c80-ac1a-11eb-9c9d-3cf57325f816.png">
